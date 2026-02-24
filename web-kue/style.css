@@ -1,0 +1,74 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    /* Satu background kucing untuk seluruh halaman */
+    background: url('img/kucing.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Memastikan konten di tengah layar */
+}
+
+/* Kotak Hitam Transparan 80% */
+.card {
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 40px;
+    border-radius: 25px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px); /* Efek blur kaca pada background kucing */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.title-hbd {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+/* --- KODE KUE TETAP SAMA --- */
+.cake-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.candle { width: 10px; height: 35px; background: #fff; border-radius: 4px; position: relative; z-index: 2; }
+.flame {
+    width: 15px; height: 20px; background: orange; border-radius: 50% 50% 20% 20%;
+    position: absolute; top: -22px; left: -2px;
+    animation: flicker 0.5s infinite alternate;
+    box-shadow: 0 0 15px orange; cursor: pointer;
+}
+@keyframes flicker { from { transform: scale(1); } to { transform: scale(1.2); } }
+.cake { position: relative; width: 160px; height: 80px; }
+.layer { position: absolute; width: 100%; border-radius: 8px; }
+.layer-bottom { height: 40px; background: #6d4c41; bottom: 0; }
+.layer-middle { height: 35px; background: #8d6e63; bottom: 25px; }
+.layer-top { height: 25px; background: #f8bbd0; bottom: 50px; }
+.icing { width: 100%; height: 12px; background: #f06292; border-radius: 8px 8px 0 0; }
+.drip {
+    position: absolute; width: 15px; height: 15px; background: #f06292; border-radius: 50%;
+    top: 5px; left: 20px; box-shadow: 40px 0 0 #f06292, 90px 0 0 #f06292;
+}
+.plate {
+    position: absolute; bottom: -10px; left: -20px; width: 200px; height: 15px;
+    background: rgba(255,255,255,0.2); border-radius: 50%;
+}
+
+/* Tombol */
+button {
+    background: #ff4d6d; color: white; border: none; padding: 12px 25px;
+    border-radius: 25px; cursor: pointer; font-weight: bold; transition: 0.3s; margin-top: 15px;
+}
+button:hover { transform: scale(1.05); background: #ff758c; }
