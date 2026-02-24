@@ -6,7 +6,7 @@ const judul = document.getElementById('headline');
 // 1. Fitur Tiup Lilin (Klik pada api)
 lilin.addEventListener('click', function() {
     lilin.style.display = 'none'; // Menghilangkan api
-    judul.innerHTML = "Thanks for opening this";
+    judul.innerHTML = "Take care, Al. Cheerss";
     alert("Semoga semua apa yang kamu pengen tercapai ya!");
 });
 
@@ -23,4 +23,5 @@ function confettiEffect() {
     setTimeout(() => {
         document.body.style.backgroundColor = ""; // Balikkan lagi
     }, 1000);
+
 }
